@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Enc-G6-ehF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact Us-->
+        <scene sceneID="acj-D7-5cY">
+            <objects>
+                <viewController id="8JI-Jg-AUH" customClass="ContactUsViewController" customModule="C4Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1E-Ei-zPJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="JQs-kL-kkF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H0V-zW-q15">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-XY-4Pz">
+                                <rect key="frame" x="16" y="80" width="343" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.058861819580000002" green="0.29707012579999997" blue="0.91815981660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-E6-L09">
+                                <rect key="frame" x="16" y="110" width="343" height="101"/>
+                                <string key="text">5708 Upper 147th Street West, Suite 103
+
+Apple Valley, MN 55124
+
+Phone: 612-234-1759
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c4fitness-logo" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-t9-JoW">
+                                <rect key="frame" x="36" y="227" width="303" height="236"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9u-t9-JoW" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" constant="20" id="0De-t9-VEt"/>
+                            <constraint firstItem="gzU-XY-4Pz" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="9fZ-Xs-GzY"/>
+                            <constraint firstItem="gzU-XY-4Pz" firstAttribute="top" secondItem="n1E-Ei-zPJ" secondAttribute="bottom" constant="16" id="CbR-Q8-nPQ"/>
+                            <constraint firstItem="GaU-E6-L09" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="HH9-YF-UHQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9u-t9-JoW" secondAttribute="trailing" constant="20" id="NFf-47-rKO"/>
+                            <constraint firstItem="GaU-E6-L09" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="Pr4-qg-jlt"/>
+                            <constraint firstItem="GaU-E6-L09" firstAttribute="top" secondItem="gzU-XY-4Pz" secondAttribute="bottom" constant="8" id="TvP-8N-Tmy"/>
+                            <constraint firstItem="H9u-t9-JoW" firstAttribute="top" secondItem="GaU-E6-L09" secondAttribute="bottom" constant="16" id="aOH-Po-mLH"/>
+                            <constraint firstItem="gzU-XY-4Pz" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="eCT-Nt-8DT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Us" id="rYz-bp-c0s">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="OG9-E9-Hcf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="OG9-E9-Hcf" id="EFL-VN-1t4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdZ-QK-v1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490.4000000000001" y="2489.5052473763121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VXR-q9-WaB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Enc-G6-ehF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VKs-XD-C7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8JI-Jg-AUH" kind="relationship" relationship="rootViewController" id="PKy-Eq-Pdt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVZ-1C-YAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="2493"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="c4fitness-logo" width="500" height="236"/>
+        <image name="menu" width="22" height="22"/>
+    </resources>
+</document>

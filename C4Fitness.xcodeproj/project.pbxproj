@@ -7,12 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555D060C7A20CF52D8C6DF07 /* Pods_C4FitnessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C51A80991E93607A9E8CA0 /* Pods_C4FitnessTests.framework */; };
+		712AF190A4A082B0E59209AF /* Pods_C4Fitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590D2E93FD7C554B3EDD6766 /* Pods_C4Fitness.framework */; };
+		7E0BBB701DE4836B0061C6B9 /* ContentServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */; };
 		7E327C571DDC090A0069DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C561DDC090A0069DFBA /* AppDelegate.swift */; };
-		7E327C591DDC090A0069DFBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C581DDC090A0069DFBA /* ViewController.swift */; };
-		7E327C5C1DDC090A0069DFBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5A1DDC090A0069DFBA /* Main.storyboard */; };
 		7E327C5E1DDC090A0069DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5D1DDC090A0069DFBA /* Assets.xcassets */; };
 		7E327C611DDC090A0069DFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */; };
-		7E327C6C1DDC090A0069DFBA /* C4FitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C6B1DDC090A0069DFBA /* C4FitnessTests.swift */; };
+		7E327C7B1DDC09860069DFBA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7A1DDC09860069DFBA /* SWRevealViewController.m */; };
+		7E327C811DDC0B490069DFBA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */; };
+		7E327C821DDC0B490069DFBA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7D1DDC0B490069DFBA /* MapViewController.swift */; };
+		7E327C831DDC0B490069DFBA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */; };
+		7E327C841DDC0B490069DFBA /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */; };
+		7E327C851DDC0B490069DFBA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C801DDC0B490069DFBA /* MenuController.swift */; };
+		7E327C881DDC0C110069DFBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C861DDC0C110069DFBA /* Main.storyboard */; };
+		7E327C8B1DDC0CE90069DFBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C8A1DDC0CE90069DFBA /* Images.xcassets */; };
+		7E4F4F461DE0D8C60042791D /* Revealable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4F4F451DE0D8C60042791D /* Revealable.swift */; };
+		7E676BAB1DDFCD490006F983 /* TrainerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E676BAA1DDFCD490006F983 /* TrainerDetailViewController.swift */; };
+		7E97E34D1DDCF33200AAD507 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E34C1DDCF33200AAD507 /* ClassScheduleViewController.swift */; };
+		7E97E3511DDD03CE00AAD507 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3501DDD03CE00AAD507 /* AboutUsViewController.swift */; };
+		7E97E3531DDD06A700AAD507 /* TrainersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3521DDD06A700AAD507 /* TrainersViewController.swift */; };
+		7E97E3551DDD102900AAD507 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3541DDD102900AAD507 /* ContactUsViewController.swift */; };
+		7E97E3591DDD106600AAD507 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3581DDD106600AAD507 /* TestimonialsViewController.swift */; };
+		7E9B8AA71DE548E900AB10EC /* DownloadableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */; };
+		EB16003F1DDE7E520031B648 /* TrainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16003E1DDE7E520031B648 /* TrainerModel.swift */; };
+		EB1600411DDE7FFA0031B648 /* TrainerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */; };
+		EB1600431DDE823B0031B648 /* ScheduledClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600421DDE823B0031B648 /* ScheduledClassModel.swift */; };
+		EB1600451DDE83160031B648 /* ScheduledClassModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */; };
+		EB1600471DDE85450031B648 /* TestimonialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600461DDE85450031B648 /* TestimonialModel.swift */; };
+		EB1600491DDE861B0031B648 /* TestimonialModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */; };
+		EB73CEC91DE60D9100A2035C /* FitnessClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73CEC81DE60D9100A2035C /* FitnessClassModel.swift */; };
+		EB8D5A951DE67F2300D6F470 /* FitnessClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D5A941DE67F2300D6F470 /* FitnessClassViewController.swift */; };
+		EB8D5A971DE687B300D6F470 /* FitnessClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D5A961DE687B300D6F470 /* FitnessClassDetailViewController.swift */; };
+		EB8D5A991DE691CC00D6F470 /* FitnessClassModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */; };
+		EBE3FC941DEB963C005F5F8E /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC921DEB963C005F5F8E /* ContactUs.storyboard */; };
+		EBE3FC961DEB96D5005F5F8E /* Testimonials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC951DEB96D5005F5F8E /* Testimonials.storyboard */; };
+		EBE3FC991DEB9775005F5F8E /* Trainers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC971DEB9775005F5F8E /* Trainers.storyboard */; };
+		EBE3FC9B1DEB97FB005F5F8E /* FitnessClasses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC9A1DEB97FB005F5F8E /* FitnessClasses.storyboard */; };
+		EBE3FC9E1DEB9867005F5F8E /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC9C1DEB9867005F5F8E /* AboutUs.storyboard */; };
+		EBE3FCA01DEB99B2005F5F8E /* ClassSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3FC9F1DEB99B2005F5F8E /* ClassSchedule.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +58,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C51A80991E93607A9E8CA0 /* Pods_C4FitnessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_C4FitnessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		590D2E93FD7C554B3EDD6766 /* Pods_C4Fitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_C4Fitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675925A06F498F927E7E45AB /* Pods-C4Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness.release.xcconfig"; sourceTree = "<group>"; };
+		78817DEEF0FF33B52DF4EBBC /* Pods-C4FitnessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4FitnessTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentServer.swift; sourceTree = "<group>"; };
 		7E327C531DDC090A0069DFBA /* C4Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E327C561DDC090A0069DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E327C581DDC090A0069DFBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E327C5B1DDC090A0069DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E327C5D1DDC090A0069DFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E327C601DDC090A0069DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E327C621DDC090A0069DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E327C671DDC090A0069DFBA /* C4FitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = C4FitnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E327C6B1DDC090A0069DFBA /* C4FitnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4FitnessTests.swift; sourceTree = "<group>"; };
 		7E327C6D1DDC090A0069DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E327C781DDC09860069DFBA /* C4Fitness-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "C4Fitness-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E327C791DDC09860069DFBA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		7E327C7A1DDC09860069DFBA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		7E327C7D1DDC0B490069DFBA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		7E327C801DDC0B490069DFBA /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		7E327C871DDC0C110069DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E327C8A1DDC0CE90069DFBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E4F4F451DE0D8C60042791D /* Revealable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revealable.swift; sourceTree = "<group>"; };
+		7E676BAA1DDFCD490006F983 /* TrainerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerDetailViewController.swift; sourceTree = "<group>"; };
+		7E97E34C1DDCF33200AAD507 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
+		7E97E3501DDD03CE00AAD507 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		7E97E3521DDD06A700AAD507 /* TrainersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainersViewController.swift; sourceTree = "<group>"; };
+		7E97E3541DDD102900AAD507 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		7E97E3581DDD106600AAD507 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
+		7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadableDataModel.swift; sourceTree = "<group>"; };
+		8A9D079A634BF41154947D6A /* Pods-C4Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness.debug.xcconfig"; sourceTree = "<group>"; };
+		D857B5CBBFAFDC65FF2332D7 /* Pods-C4FitnessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4FitnessTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB16003E1DDE7E520031B648 /* TrainerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerModel.swift; sourceTree = "<group>"; };
+		EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerModelTests.swift; sourceTree = "<group>"; };
+		EB1600421DDE823B0031B648 /* ScheduledClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledClassModel.swift; sourceTree = "<group>"; };
+		EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduledClassModelTests.swift; path = ../C4Fitness/ScheduledClassModelTests.swift; sourceTree = "<group>"; };
+		EB1600461DDE85450031B648 /* TestimonialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestimonialModel.swift; sourceTree = "<group>"; };
+		EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestimonialModelTests.swift; sourceTree = "<group>"; };
+		EB73CEC81DE60D9100A2035C /* FitnessClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessClassModel.swift; sourceTree = "<group>"; };
+		EB8D5A941DE67F2300D6F470 /* FitnessClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessClassViewController.swift; sourceTree = "<group>"; };
+		EB8D5A961DE687B300D6F470 /* FitnessClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessClassDetailViewController.swift; sourceTree = "<group>"; };
+		EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessClassModelTests.swift; sourceTree = "<group>"; };
+		EBE3FC931DEB963C005F5F8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ContactUs.storyboard; sourceTree = "<group>"; };
+		EBE3FC951DEB96D5005F5F8E /* Testimonials.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Testimonials.storyboard; sourceTree = "<group>"; };
+		EBE3FC981DEB9775005F5F8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainers.storyboard; sourceTree = "<group>"; };
+		EBE3FC9A1DEB97FB005F5F8E /* FitnessClasses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FitnessClasses.storyboard; sourceTree = "<group>"; };
+		EBE3FC9D1DEB9867005F5F8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AboutUs.storyboard; sourceTree = "<group>"; };
+		EBE3FC9F1DEB99B2005F5F8E /* ClassSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassSchedule.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712AF190A4A082B0E59209AF /* Pods_C4Fitness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +121,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555D060C7A20CF52D8C6DF07 /* Pods_C4FitnessTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E44B662B65AD7C08516E16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A9D079A634BF41154947D6A /* Pods-C4Fitness.debug.xcconfig */,
+				675925A06F498F927E7E45AB /* Pods-C4Fitness.release.xcconfig */,
+				78817DEEF0FF33B52DF4EBBC /* Pods-C4FitnessTests.debug.xcconfig */,
+				D857B5CBBFAFDC65FF2332D7 /* Pods-C4FitnessTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E327C4A1DDC090A0069DFBA = {
 			isa = PBXGroup;
 			children = (
 				7E327C551DDC090A0069DFBA /* C4Fitness */,
 				7E327C6A1DDC090A0069DFBA /* C4FitnessTests */,
 				7E327C541DDC090A0069DFBA /* Products */,
+				07E44B662B65AD7C08516E16 /* Pods */,
+				FAF3DA722DFB6C0BF833A699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +163,14 @@
 			isa = PBXGroup;
 			children = (
 				7E327C561DDC090A0069DFBA /* AppDelegate.swift */,
-				7E327C581DDC090A0069DFBA /* ViewController.swift */,
-				7E327C5A1DDC090A0069DFBA /* Main.storyboard */,
+				7EB8550B1DDE049400992B18 /* Demo Controller */,
+				7E327C761DDC09360069DFBA /* Controller */,
+				EB16003D1DDE7D7A0031B648 /* Model */,
+				7E327C771DDC09470069DFBA /* SWRevealViewController */,
 				7E327C5D1DDC090A0069DFBA /* Assets.xcassets */,
-				7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */,
+				7E327C8A1DDC0CE90069DFBA /* Images.xcassets */,
+				EBAFAADD1DE261F6007712E6 /* Images */,
+				7E327C891DDC0C2A0069DFBA /* Storyboard */,
 				7E327C621DDC090A0069DFBA /* Info.plist */,
 			);
 			path = C4Fitness;
@@ -90,10 +179,95 @@
 		7E327C6A1DDC090A0069DFBA /* C4FitnessTests */ = {
 			isa = PBXGroup;
 			children = (
-				7E327C6B1DDC090A0069DFBA /* C4FitnessTests.swift */,
+				EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */,
+				EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */,
+				EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */,
+				EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */,
 				7E327C6D1DDC090A0069DFBA /* Info.plist */,
 			);
 			path = C4FitnessTests;
+			sourceTree = "<group>";
+		};
+		7E327C761DDC09360069DFBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E97E3501DDD03CE00AAD507 /* AboutUsViewController.swift */,
+				7E97E34C1DDCF33200AAD507 /* ClassScheduleViewController.swift */,
+				7E97E3541DDD102900AAD507 /* ContactUsViewController.swift */,
+				EB8D5A941DE67F2300D6F470 /* FitnessClassViewController.swift */,
+				EB8D5A961DE687B300D6F470 /* FitnessClassDetailViewController.swift */,
+				7E327C801DDC0B490069DFBA /* MenuController.swift */,
+				7E97E3581DDD106600AAD507 /* TestimonialsViewController.swift */,
+				7E97E3521DDD06A700AAD507 /* TrainersViewController.swift */,
+				7E676BAA1DDFCD490006F983 /* TrainerDetailViewController.swift */,
+				7E4F4F451DE0D8C60042791D /* Revealable.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7E327C771DDC09470069DFBA /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E327C791DDC09860069DFBA /* SWRevealViewController.h */,
+				7E327C7A1DDC09860069DFBA /* SWRevealViewController.m */,
+				7E327C781DDC09860069DFBA /* C4Fitness-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		7E327C891DDC0C2A0069DFBA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7E327C861DDC0C110069DFBA /* Main.storyboard */,
+				EBE3FC9C1DEB9867005F5F8E /* AboutUs.storyboard */,
+				EBE3FC9F1DEB99B2005F5F8E /* ClassSchedule.storyboard */,
+				EBE3FC921DEB963C005F5F8E /* ContactUs.storyboard */,
+				EBE3FC9A1DEB97FB005F5F8E /* FitnessClasses.storyboard */,
+				EBE3FC971DEB9775005F5F8E /* Trainers.storyboard */,
+				EBE3FC951DEB96D5005F5F8E /* Testimonials.storyboard */,
+				7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		7EB8550B1DDE049400992B18 /* Demo Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */,
+				7E327C7D1DDC0B490069DFBA /* MapViewController.swift */,
+				7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */,
+				7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */,
+			);
+			name = "Demo Controller";
+			sourceTree = "<group>";
+		};
+		EB16003D1DDE7D7A0031B648 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */,
+				7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */,
+				EB73CEC81DE60D9100A2035C /* FitnessClassModel.swift */,
+				EB1600421DDE823B0031B648 /* ScheduledClassModel.swift */,
+				EB1600461DDE85450031B648 /* TestimonialModel.swift */,
+				EB16003E1DDE7E520031B648 /* TrainerModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EBAFAADD1DE261F6007712E6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FAF3DA722DFB6C0BF833A699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				590D2E93FD7C554B3EDD6766 /* Pods_C4Fitness.framework */,
+				08C51A80991E93607A9E8CA0 /* Pods_C4FitnessTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E327C701DDC090A0069DFBA /* Build configuration list for PBXNativeTarget "C4Fitness" */;
 			buildPhases = (
+				16EB48217DC7FCDF3A044178 /* [CP] Check Pods Manifest.lock */,
 				7E327C4F1DDC090A0069DFBA /* Sources */,
 				7E327C501DDC090A0069DFBA /* Frameworks */,
 				7E327C511DDC090A0069DFBA /* Resources */,
+				93A5F7A409B2778FB51E2A36 /* [CP] Embed Pods Frameworks */,
+				A01DBB4498084F19A91E5FD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E327C731DDC090A0069DFBA /* Build configuration list for PBXNativeTarget "C4FitnessTests" */;
 			buildPhases = (
+				B999610FDD41022BF0F7643C /* [CP] Check Pods Manifest.lock */,
 				7E327C631DDC090A0069DFBA /* Sources */,
 				7E327C641DDC090A0069DFBA /* Frameworks */,
 				7E327C651DDC090A0069DFBA /* Resources */,
+				2120ED6E7A6F6094E49301D8 /* [CP] Embed Pods Frameworks */,
+				994C597B57F25423BAFFB4AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +326,7 @@
 				TargetAttributes = {
 					7E327C521DDC090A0069DFBA = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					7E327C661DDC090A0069DFBA = {
@@ -179,9 +360,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E327C881DDC0C110069DFBA /* Main.storyboard in Resources */,
+				7E327C8B1DDC0CE90069DFBA /* Images.xcassets in Resources */,
+				EBE3FC991DEB9775005F5F8E /* Trainers.storyboard in Resources */,
+				EBE3FC9B1DEB97FB005F5F8E /* FitnessClasses.storyboard in Resources */,
+				EBE3FC9E1DEB9867005F5F8E /* AboutUs.storyboard in Resources */,
+				EBE3FC961DEB96D5005F5F8E /* Testimonials.storyboard in Resources */,
+				EBE3FCA01DEB99B2005F5F8E /* ClassSchedule.storyboard in Resources */,
 				7E327C611DDC090A0069DFBA /* LaunchScreen.storyboard in Resources */,
 				7E327C5E1DDC090A0069DFBA /* Assets.xcassets in Resources */,
-				7E327C5C1DDC090A0069DFBA /* Main.storyboard in Resources */,
+				EBE3FC941DEB963C005F5F8E /* ContactUs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +382,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16EB48217DC7FCDF3A044178 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2120ED6E7A6F6094E49301D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A5F7A409B2778FB51E2A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		994C597B57F25423BAFFB4AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01DBB4498084F19A91E5FD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B999610FDD41022BF0F7643C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E327C4F1DDC090A0069DFBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E327C591DDC090A0069DFBA /* ViewController.swift in Sources */,
+				EB8D5A971DE687B300D6F470 /* FitnessClassDetailViewController.swift in Sources */,
+				EB8D5A951DE67F2300D6F470 /* FitnessClassViewController.swift in Sources */,
+				EB1600431DDE823B0031B648 /* ScheduledClassModel.swift in Sources */,
+				7E327C851DDC0B490069DFBA /* MenuController.swift in Sources */,
+				7E97E3511DDD03CE00AAD507 /* AboutUsViewController.swift in Sources */,
+				7E327C811DDC0B490069DFBA /* NewsTableViewController.swift in Sources */,
+				EB73CEC91DE60D9100A2035C /* FitnessClassModel.swift in Sources */,
+				7E676BAB1DDFCD490006F983 /* TrainerDetailViewController.swift in Sources */,
+				7E0BBB701DE4836B0061C6B9 /* ContentServer.swift in Sources */,
+				7E97E34D1DDCF33200AAD507 /* ClassScheduleViewController.swift in Sources */,
+				7E327C841DDC0B490069DFBA /* NewsTableViewCell.swift in Sources */,
 				7E327C571DDC090A0069DFBA /* AppDelegate.swift in Sources */,
+				7E327C821DDC0B490069DFBA /* MapViewController.swift in Sources */,
+				7E327C7B1DDC09860069DFBA /* SWRevealViewController.m in Sources */,
+				7E97E3531DDD06A700AAD507 /* TrainersViewController.swift in Sources */,
+				EB1600471DDE85450031B648 /* TestimonialModel.swift in Sources */,
+				7E327C831DDC0B490069DFBA /* PhotoViewController.swift in Sources */,
+				7E4F4F461DE0D8C60042791D /* Revealable.swift in Sources */,
+				EB16003F1DDE7E520031B648 /* TrainerModel.swift in Sources */,
+				7E9B8AA71DE548E900AB10EC /* DownloadableDataModel.swift in Sources */,
+				7E97E3591DDD106600AAD507 /* TestimonialsViewController.swift in Sources */,
+				7E97E3551DDD102900AAD507 /* ContactUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +509,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E327C6C1DDC090A0069DFBA /* C4FitnessTests.swift in Sources */,
+				EB1600451DDE83160031B648 /* ScheduledClassModelTests.swift in Sources */,
+				EB8D5A991DE691CC00D6F470 /* FitnessClassModelTests.swift in Sources */,
+				EB1600411DDE7FFA0031B648 /* TrainerModelTests.swift in Sources */,
+				EB1600491DDE861B0031B648 /* TestimonialModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,20 +527,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7E327C5A1DDC090A0069DFBA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E327C5B1DDC090A0069DFBA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7E327C601DDC090A0069DFBA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7E327C861DDC0C110069DFBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E327C871DDC0C110069DFBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE3FC921DEB963C005F5F8E /* ContactUs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE3FC931DEB963C005F5F8E /* Base */,
+			);
+			name = ContactUs.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE3FC971DEB9775005F5F8E /* Trainers.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE3FC981DEB9775005F5F8E /* Base */,
+			);
+			name = Trainers.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE3FC9C1DEB9867005F5F8E /* AboutUs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE3FC9D1DEB9867005F5F8E /* Base */,
+			);
+			name = AboutUs.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -260,6 +588,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -309,6 +638,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -335,30 +665,40 @@
 		};
 		7E327C711DDC090A0069DFBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A9D079A634BF41154947D6A /* Pods-C4Fitness.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = C4Fitness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.momentumsoft.C4Fitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C4Fitness/C4Fitness-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7E327C721DDC090A0069DFBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675925A06F498F927E7E45AB /* Pods-C4Fitness.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = C4Fitness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.momentumsoft.C4Fitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C4Fitness/C4Fitness-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		7E327C741DDC090A0069DFBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78817DEEF0FF33B52DF4EBBC /* Pods-C4FitnessTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -373,6 +713,7 @@
 		};
 		7E327C751DDC090A0069DFBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D857B5CBBFAFDC65FF2332D7 /* Pods-C4FitnessTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -404,6 +745,7 @@
 				7E327C721DDC090A0069DFBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E327C731DDC090A0069DFBA /* Build configuration list for PBXNativeTarget "C4FitnessTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +754,7 @@
 				7E327C751DDC090A0069DFBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
