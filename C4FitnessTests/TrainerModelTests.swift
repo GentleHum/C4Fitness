@@ -41,6 +41,28 @@ class TrainerModelTests: XCTestCase {
         let trainer = TrainerModel(name: "Foo", imageName: "Bar")
         XCTAssertEqual(trainer.imageName, "Bar")
     }
-   
+    
+    func test_Create_SetsSequenceNumber() {
+        let trainer = TrainerModel(name: "Foo", sequenceNumber: 1)
+        XCTAssertEqual(trainer.sequenceNumber, 1)
+    }
+    
+    func test_CreateWithJsonData_SetsValues() {
+        let blogFields = ["name": "Foo",
+                          "title": "Bar",
+                          "imageName": "Dee",
+                          "details": "XXX",
+                          "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let trainer = TrainerModel()
+        trainer.set(jsonData: jsonData)
+        XCTAssertEqual(trainer.name, "Foo")
+        XCTAssertEqual(trainer.title, "Bar")
+        XCTAssertEqual(trainer.imageName, "Dee")
+        XCTAssertEqual(trainer.details, "XXX")
+        XCTAssertEqual(trainer.sequenceNumber, 1)
+    }
+    
+    
     
 }

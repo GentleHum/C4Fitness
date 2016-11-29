@@ -47,6 +47,28 @@ class ScheduledClassModelTests: XCTestCase {
         XCTAssertEqual(scheduledClass.trainerName, "Bar")
     }
     
+    func test_Create_SetsSequenceNumber() {
+        let scheduledClass = ScheduledClassModel(name: "Foo", sequenceNumber: 1)
+        XCTAssertEqual(scheduledClass.sequenceNumber, 1)
+    }
+
+    func test_CreateWithJsonData_SetsValues() {
+        let blogFields = ["name": "Foo",
+                          "date": "Bar",
+                          "startTime": "Dee",
+                          "endTime": "Lee",
+                          "trainerName": "XXX",
+                          "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let scheduledClass = ScheduledClassModel()
+        scheduledClass.set(jsonData: jsonData)
+        XCTAssertEqual(scheduledClass.name, "Foo")
+        XCTAssertEqual(scheduledClass.date, "Bar")
+        XCTAssertEqual(scheduledClass.startTime, "Dee")
+        XCTAssertEqual(scheduledClass.endTime, "Lee")
+        XCTAssertEqual(scheduledClass.trainerName, "XXX")
+        XCTAssertEqual(scheduledClass.sequenceNumber, 1)
+    }
     
     
 }

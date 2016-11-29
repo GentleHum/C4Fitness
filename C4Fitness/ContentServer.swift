@@ -52,6 +52,7 @@ enum DownloadableObjectType {
     }
 }
 
+let mindbodyOnlineString = "https://clients.mindbodyonline.com/classic/ws?studioid=45691&stype=-7&sView=week&sLoc=0"
 
 class ContentServer {
     

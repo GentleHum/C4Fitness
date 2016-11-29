@@ -21,7 +21,7 @@ class TestimonialsViewController: UITableViewController {
         // Do any additional setup after loading the view.
         
         // remove empty cells at bottom of table
-        self.tableView.tableFooterView = UIView()
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         // make the row heights self-sizing
         self.tableView.rowHeight = UITableViewAutomaticDimension

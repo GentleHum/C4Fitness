@@ -36,6 +36,25 @@ class TestimonialModelTests: XCTestCase {
         let testimonial = TestimonialModel(name: "Foo", text: "Bar")
         XCTAssertEqual(testimonial.text, "Bar")
     }
+
+    func test_Create_SetsSequenceNumber() {
+        let testimonial = TestimonialModel(name: "Foo", sequenceNumber: 1)
+        XCTAssertEqual(testimonial.sequenceNumber, 1)
+    }
     
+    func test_CreateWithJsonData_SetsValues() {
+        let blogFields = ["name": "Foo",
+                          "location": "Bar",
+                          "text": "Dee",
+                          "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let testimonial = TestimonialModel()
+        testimonial.set(jsonData: jsonData)
+        XCTAssertEqual(testimonial.name, "Foo")
+        XCTAssertEqual(testimonial.location, "Bar")
+        XCTAssertEqual(testimonial.text, "Dee")
+        XCTAssertEqual(testimonial.sequenceNumber, 1)
+    }
+
     
 }

@@ -14,10 +14,6 @@
 		7E327C5E1DDC090A0069DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5D1DDC090A0069DFBA /* Assets.xcassets */; };
 		7E327C611DDC090A0069DFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */; };
 		7E327C7B1DDC09860069DFBA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7A1DDC09860069DFBA /* SWRevealViewController.m */; };
-		7E327C811DDC0B490069DFBA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */; };
-		7E327C821DDC0B490069DFBA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7D1DDC0B490069DFBA /* MapViewController.swift */; };
-		7E327C831DDC0B490069DFBA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */; };
-		7E327C841DDC0B490069DFBA /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */; };
 		7E327C851DDC0B490069DFBA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C801DDC0B490069DFBA /* MenuController.swift */; };
 		7E327C881DDC0C110069DFBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C861DDC0C110069DFBA /* Main.storyboard */; };
 		7E327C8B1DDC0CE90069DFBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C8A1DDC0CE90069DFBA /* Images.xcassets */; };
@@ -73,10 +69,6 @@
 		7E327C781DDC09860069DFBA /* C4Fitness-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "C4Fitness-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E327C791DDC09860069DFBA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		7E327C7A1DDC09860069DFBA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		7E327C7D1DDC0B490069DFBA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		7E327C801DDC0B490069DFBA /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		7E327C871DDC0C110069DFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E327C8A1DDC0CE90069DFBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -163,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				7E327C561DDC090A0069DFBA /* AppDelegate.swift */,
-				7EB8550B1DDE049400992B18 /* Demo Controller */,
 				7E327C761DDC09360069DFBA /* Controller */,
 				EB16003D1DDE7D7A0031B648 /* Model */,
 				7E327C771DDC09470069DFBA /* SWRevealViewController */,
@@ -179,10 +170,7 @@
 		7E327C6A1DDC090A0069DFBA /* C4FitnessTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */,
-				EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */,
-				EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */,
-				EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */,
+				EBE3FCA11DEBB3CB005F5F8E /* Model */,
 				7E327C6D1DDC090A0069DFBA /* Info.plist */,
 			);
 			path = C4FitnessTests;
@@ -230,17 +218,6 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		7EB8550B1DDE049400992B18 /* Demo Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7E327C7C1DDC0B490069DFBA /* NewsTableViewController.swift */,
-				7E327C7D1DDC0B490069DFBA /* MapViewController.swift */,
-				7E327C7E1DDC0B490069DFBA /* PhotoViewController.swift */,
-				7E327C7F1DDC0B490069DFBA /* NewsTableViewCell.swift */,
-			);
-			name = "Demo Controller";
-			sourceTree = "<group>";
-		};
 		EB16003D1DDE7D7A0031B648 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +236,17 @@
 			children = (
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		EBE3FCA11DEBB3CB005F5F8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */,
+				EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */,
+				EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */,
+				EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FAF3DA722DFB6C0BF833A699 /* Frameworks */ = {
@@ -485,18 +473,14 @@
 				EB1600431DDE823B0031B648 /* ScheduledClassModel.swift in Sources */,
 				7E327C851DDC0B490069DFBA /* MenuController.swift in Sources */,
 				7E97E3511DDD03CE00AAD507 /* AboutUsViewController.swift in Sources */,
-				7E327C811DDC0B490069DFBA /* NewsTableViewController.swift in Sources */,
 				EB73CEC91DE60D9100A2035C /* FitnessClassModel.swift in Sources */,
 				7E676BAB1DDFCD490006F983 /* TrainerDetailViewController.swift in Sources */,
 				7E0BBB701DE4836B0061C6B9 /* ContentServer.swift in Sources */,
 				7E97E34D1DDCF33200AAD507 /* ClassScheduleViewController.swift in Sources */,
-				7E327C841DDC0B490069DFBA /* NewsTableViewCell.swift in Sources */,
 				7E327C571DDC090A0069DFBA /* AppDelegate.swift in Sources */,
-				7E327C821DDC0B490069DFBA /* MapViewController.swift in Sources */,
 				7E327C7B1DDC09860069DFBA /* SWRevealViewController.m in Sources */,
 				7E97E3531DDD06A700AAD507 /* TrainersViewController.swift in Sources */,
 				EB1600471DDE85450031B648 /* TestimonialModel.swift in Sources */,
-				7E327C831DDC0B490069DFBA /* PhotoViewController.swift in Sources */,
 				7E4F4F461DE0D8C60042791D /* Revealable.swift in Sources */,
 				EB16003F1DDE7E520031B648 /* TrainerModel.swift in Sources */,
 				7E9B8AA71DE548E900AB10EC /* DownloadableDataModel.swift in Sources */,
