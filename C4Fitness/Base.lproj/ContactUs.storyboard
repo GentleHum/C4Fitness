@@ -40,20 +40,21 @@ Phone: 612-234-1759
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c4fitness-logo" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-t9-JoW">
-                                <rect key="frame" x="36" y="227" width="303" height="236"/>
-                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-Mv-dEs">
+                                <rect key="frame" x="16" y="219" width="343" height="432"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H9u-t9-JoW" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" constant="20" id="0De-t9-VEt"/>
                             <constraint firstItem="gzU-XY-4Pz" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="9fZ-Xs-GzY"/>
                             <constraint firstItem="gzU-XY-4Pz" firstAttribute="top" secondItem="n1E-Ei-zPJ" secondAttribute="bottom" constant="16" id="CbR-Q8-nPQ"/>
+                            <constraint firstItem="XUe-Mv-dEs" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="Gg9-PJ-Ydd"/>
                             <constraint firstItem="GaU-E6-L09" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="HH9-YF-UHQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H9u-t9-JoW" secondAttribute="trailing" constant="20" id="NFf-47-rKO"/>
                             <constraint firstItem="GaU-E6-L09" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="Pr4-qg-jlt"/>
+                            <constraint firstItem="XUe-Mv-dEs" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="TsL-ak-3e1"/>
                             <constraint firstItem="GaU-E6-L09" firstAttribute="top" secondItem="gzU-XY-4Pz" secondAttribute="bottom" constant="8" id="TvP-8N-Tmy"/>
-                            <constraint firstItem="H9u-t9-JoW" firstAttribute="top" secondItem="GaU-E6-L09" secondAttribute="bottom" constant="16" id="aOH-Po-mLH"/>
+                            <constraint firstItem="XUe-Mv-dEs" firstAttribute="top" secondItem="GaU-E6-L09" secondAttribute="bottom" constant="8" id="VO0-yA-MV7"/>
+                            <constraint firstItem="JQs-kL-kkF" firstAttribute="top" secondItem="XUe-Mv-dEs" secondAttribute="bottom" constant="16" id="bPr-J0-KCE"/>
                             <constraint firstItem="gzU-XY-4Pz" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="eCT-Nt-8DT"/>
                         </constraints>
                     </view>
@@ -61,6 +62,7 @@ Phone: 612-234-1759
                         <barButtonItem key="leftBarButtonItem" image="menu" id="OG9-E9-Hcf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="XUe-Mv-dEs" id="659-gf-HjT"/>
                         <outlet property="menuButton" destination="OG9-E9-Hcf" id="EFL-VN-1t4"/>
                     </connections>
                 </viewController>
@@ -88,7 +90,6 @@ Phone: 612-234-1759
         </scene>
     </scenes>
     <resources>
-        <image name="c4fitness-logo" width="500" height="236"/>
         <image name="menu" width="22" height="22"/>
     </resources>
 </document>

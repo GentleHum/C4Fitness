@@ -13,7 +13,7 @@ extension UIViewController {
         if let revealViewController = self.revealViewController()  {
             self.view.addGestureRecognizer(revealViewController.panGestureRecognizer())
             revealViewController.presentFrontViewHierarchically = false
-            revealViewController.toggleAnimationDuration = 0.15
+            revealViewController.toggleAnimationDuration = 0.3
             revealViewController.bounceBackOnOverdraw = false
             revealViewController.bounceBackOnLeftOverdraw = false
             revealViewController.replaceViewAnimationDuration = 0
