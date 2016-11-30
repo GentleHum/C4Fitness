@@ -53,13 +53,13 @@ class ScheduledClassModelTests: XCTestCase {
     }
 
     func test_CreateWithJsonData_SetsValues() {
-        let blogFields = ["name": "Foo",
-                          "date": "Bar",
-                          "startTime": "Dee",
-                          "endTime": "Lee",
-                          "trainerName": "XXX",
-                          "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let scheduledClasses = ["name": "Foo",
+                                "date": "Bar",
+                                "startTime": "Dee",
+                                "endTime": "Lee",
+                                "trainerName": "XXX",
+                                "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": scheduledClasses as AnyObject]
         let scheduledClass = ScheduledClassModel()
         scheduledClass.set(jsonData: jsonData)
         XCTAssertEqual(scheduledClass.name, "Foo")

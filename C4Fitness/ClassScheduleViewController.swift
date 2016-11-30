@@ -32,6 +32,17 @@ class ClassScheduleViewController: UITableViewController {
         
         // read from the content system
         refreshScheduledClasses()
+   
+/* zap
+        self.scheduledClasses = ContentModel.scheduledClasses
+        self.scheduledClasses.sort() { $0.getDateTime() < $1.getDateTime() }
+        
+        // update the classes for efficient display
+        self.updateClassDictionary()
+        
+        self.tableView.reloadData()
+*/
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +85,6 @@ class ClassScheduleViewController: UITableViewController {
         }
     }
     
-
     func refreshScheduledClasses() {
         ContentServer.downloadScheduledClasses() { (newScheduledClasses, serviceError) in
             
@@ -96,7 +106,7 @@ class ClassScheduleViewController: UITableViewController {
         }
         
     }
-
+    
 }
 
 // table view delegate and data source functions

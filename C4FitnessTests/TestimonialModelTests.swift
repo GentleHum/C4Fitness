@@ -43,11 +43,11 @@ class TestimonialModelTests: XCTestCase {
     }
     
     func test_CreateWithJsonData_SetsValues() {
-        let blogFields = ["name": "Foo",
-                          "location": "Bar",
-                          "text": "Dee",
-                          "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let testimonials = ["name": "Foo",
+                            "location": "Bar",
+                            "text": "Dee",
+                            "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": testimonials as AnyObject]
         let testimonial = TestimonialModel()
         testimonial.set(jsonData: jsonData)
         XCTAssertEqual(testimonial.name, "Foo")

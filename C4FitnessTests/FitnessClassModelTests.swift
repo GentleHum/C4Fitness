@@ -47,12 +47,12 @@ class FitnessClassModelTests: XCTestCase {
     }
     
     func test_CreateWithJsonData_SetsValues() {
-        let blogFields = ["name": "Foo",
-                          "description": "Bar",
-                          "footnote": "Dee",
-                          "duration": "45 min",
-                          "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": blogFields as AnyObject]
+        let fitnessClasses = ["name": "Foo",
+                              "description": "Bar",
+                              "footnote": "Dee",
+                              "duration": "45 min",
+                              "sequenceNumber": 1] as [String : Any]
+        let jsonData: Dictionary<String, AnyObject> =  ["fields": fitnessClasses as AnyObject]
         let fitnessClass = FitnessClassModel()
         fitnessClass.set(jsonData: jsonData)
         XCTAssertEqual(fitnessClass.name, "Foo")

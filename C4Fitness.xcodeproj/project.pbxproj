@@ -10,6 +10,9 @@
 		555D060C7A20CF52D8C6DF07 /* Pods_C4FitnessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C51A80991E93607A9E8CA0 /* Pods_C4FitnessTests.framework */; };
 		712AF190A4A082B0E59209AF /* Pods_C4Fitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590D2E93FD7C554B3EDD6766 /* Pods_C4Fitness.framework */; };
 		7E0BBB701DE4836B0061C6B9 /* ContentServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */; };
+		7E2368DB1DEE672B00C95E8F /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2368DA1DEE672A00C95E8F /* ContentModel.swift */; };
+		7E2368DD1DEE676D00C95E8F /* StaticContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2368DC1DEE676D00C95E8F /* StaticContentModel.swift */; };
+		7E2368DF1DEE680900C95E8F /* StaticContentModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2368DE1DEE680900C95E8F /* StaticContentModelTests.swift */; };
 		7E327C571DDC090A0069DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E327C561DDC090A0069DFBA /* AppDelegate.swift */; };
 		7E327C5E1DDC090A0069DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5D1DDC090A0069DFBA /* Assets.xcassets */; };
 		7E327C611DDC090A0069DFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */; };
@@ -59,6 +62,9 @@
 		675925A06F498F927E7E45AB /* Pods-C4Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness.release.xcconfig"; sourceTree = "<group>"; };
 		78817DEEF0FF33B52DF4EBBC /* Pods-C4FitnessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4FitnessTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentServer.swift; sourceTree = "<group>"; };
+		7E2368DA1DEE672A00C95E8F /* ContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		7E2368DC1DEE676D00C95E8F /* StaticContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticContentModel.swift; sourceTree = "<group>"; };
+		7E2368DE1DEE680900C95E8F /* StaticContentModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticContentModelTests.swift; sourceTree = "<group>"; };
 		7E327C531DDC090A0069DFBA /* C4Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E327C561DDC090A0069DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E327C5D1DDC090A0069DFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,10 +227,12 @@
 		EB16003D1DDE7D7A0031B648 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E2368DA1DEE672A00C95E8F /* ContentModel.swift */,
 				7E0BBB6F1DE4836B0061C6B9 /* ContentServer.swift */,
 				7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */,
 				EB73CEC81DE60D9100A2035C /* FitnessClassModel.swift */,
 				EB1600421DDE823B0031B648 /* ScheduledClassModel.swift */,
+				7E2368DC1DEE676D00C95E8F /* StaticContentModel.swift */,
 				EB1600461DDE85450031B648 /* TestimonialModel.swift */,
 				EB16003E1DDE7E520031B648 /* TrainerModel.swift */,
 			);
@@ -243,6 +251,7 @@
 			children = (
 				EB8D5A981DE691CC00D6F470 /* FitnessClassModelTests.swift */,
 				EB1600441DDE83160031B648 /* ScheduledClassModelTests.swift */,
+				7E2368DE1DEE680900C95E8F /* StaticContentModelTests.swift */,
 				EB1600481DDE861B0031B648 /* TestimonialModelTests.swift */,
 				EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */,
 			);
@@ -482,10 +491,12 @@
 				7E97E3531DDD06A700AAD507 /* TrainersViewController.swift in Sources */,
 				EB1600471DDE85450031B648 /* TestimonialModel.swift in Sources */,
 				7E4F4F461DE0D8C60042791D /* Revealable.swift in Sources */,
+				7E2368DB1DEE672B00C95E8F /* ContentModel.swift in Sources */,
 				EB16003F1DDE7E520031B648 /* TrainerModel.swift in Sources */,
 				7E9B8AA71DE548E900AB10EC /* DownloadableDataModel.swift in Sources */,
 				7E97E3591DDD106600AAD507 /* TestimonialsViewController.swift in Sources */,
 				7E97E3551DDD102900AAD507 /* ContactUsViewController.swift in Sources */,
+				7E2368DD1DEE676D00C95E8F /* StaticContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +508,7 @@
 				EB8D5A991DE691CC00D6F470 /* FitnessClassModelTests.swift in Sources */,
 				EB1600411DDE7FFA0031B648 /* TrainerModelTests.swift in Sources */,
 				EB1600491DDE861B0031B648 /* TestimonialModelTests.swift in Sources */,
+				7E2368DF1DEE680900C95E8F /* StaticContentModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

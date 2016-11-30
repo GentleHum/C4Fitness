@@ -26,7 +26,7 @@ public enum ContentServiceError : Error {
 
 
 enum DownloadableObjectType {
-    case ScheduledClass, Trainer, Testimonial, FitnessClass
+    case ScheduledClass, Trainer, Testimonial, FitnessClass, StaticContent
     
     var contentString: String {
         switch self {
@@ -38,6 +38,8 @@ enum DownloadableObjectType {
             return "https://cdn.contentful.com/spaces/rqpgj4g1nufm/entries?access_token=a4dd538b7ff205599dccc7481b985549c9569002b97ea348e80721a2e72f4d2a&content_type=testimonial"
         case .FitnessClass:
             return "https://cdn.contentful.com/spaces/rqpgj4g1nufm/entries?access_token=a4dd538b7ff205599dccc7481b985549c9569002b97ea348e80721a2e72f4d2a&content_type=fitnessClass"
+        case .StaticContent:
+            return "https://cdn.contentful.com/spaces/rqpgj4g1nufm/entries?access_token=a4dd538b7ff205599dccc7481b985549c9569002b97ea348e80721a2e72f4d2a&content_type=staticContent"
         }
         
     }
@@ -48,6 +50,7 @@ enum DownloadableObjectType {
         case .Trainer: return TrainerModel()
         case .Testimonial: return TestimonialModel()
         case .FitnessClass: return FitnessClassModel()
+        case .StaticContent: return StaticContentModel()
         }
     }
 }
@@ -104,6 +107,11 @@ class ContentServer {
 
     class func downloadFitnessClasses(_ completion: @escaping ([DownloadableDataModel], ContentServiceError?) -> Void) {
         downloadModelData(objectType: DownloadableObjectType.FitnessClass,
+                          completion: completion)
+    }
+
+    class func downloadStaticContent(_ completion: @escaping ([DownloadableDataModel], ContentServiceError?) -> Void) {
+        downloadModelData(objectType: DownloadableObjectType.StaticContent,
                           completion: completion)
     }
 

@@ -30,15 +30,11 @@ class TestimonialsViewController: UITableViewController {
         // setup the menu controller
         self.setRevealViewControllerOptions(menuButton: self.menuButton)
         
-        refreshTestimonials()
-        
+        self.testimonials = ContentModel.testimonials
+        self.testimonials.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+/* zap
     func refreshTestimonials() {
         ContentServer.downloadTestimonials() { (newTestimonials, serviceError) in
             
@@ -57,6 +53,7 @@ class TestimonialsViewController: UITableViewController {
         }
         
     }
+ */
 
 }
 

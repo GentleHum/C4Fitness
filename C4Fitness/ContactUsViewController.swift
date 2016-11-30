@@ -14,7 +14,9 @@ class ContactUsViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var ourAddressHeaderLabel: UILabel!
+    @IBOutlet weak var ourAddressTextLabel: UILabel!
+
     let regionRadius: CLLocationDistance = 2000  // number of meters
     let initialLocation =
         CLLocation(latitude: 44.736452500, longitude: -93.181241500)
@@ -34,6 +36,10 @@ class ContactUsViewController: UIViewController {
         
         // setup the menu controller
         self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        
+        // populate the labels
+        ourAddressHeaderLabel.text = ContentModel.ourAddresseHeader
+        ourAddressTextLabel.text = ContentModel.ourAddressText
         
         // set initial location in Apple Valley
         centerMapOnLocation(location: initialLocation)

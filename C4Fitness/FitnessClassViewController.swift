@@ -27,16 +27,13 @@ class FitnessClassViewController: UITableViewController {
         // setup the menu controller
         self.setRevealViewControllerOptions(menuButton: self.menuButton)
         
-        // title should size to fit regardless of number of lines
-        
-        refreshFitnessClasses()
+        self.fitnessClasses = ContentModel.fitnessClasses
+        self.fitnessClasses.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    
+/* zap
     func refreshFitnessClasses() {
         ContentServer.downloadFitnessClasses() { (newFitnessClasses, serviceError) in
             
@@ -56,7 +53,8 @@ class FitnessClassViewController: UITableViewController {
         }
         
     }
-
+*/
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! FitnessClassDetailViewController
         if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {

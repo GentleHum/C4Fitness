@@ -32,16 +32,11 @@ class TrainersViewController: UITableViewController {
         // setup the menu controller
         self.setRevealViewControllerOptions(menuButton: self.menuButton)
         
-        // title should size to fit regardless of number of lines
-        
-        refreshTrainers()
+        self.trainers = ContentModel.trainers
+        self.trainers.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+/* zap
     func refreshTrainers() {
         ContentServer.downloadTrainers() { (newTrainers, serviceError) in
             
@@ -61,6 +56,7 @@ class TrainersViewController: UITableViewController {
         }
         
     }
+*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! TrainerDetailViewController
