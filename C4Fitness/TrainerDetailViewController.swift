@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import AlamofireImage
+
+let screenSize = UIScreen.main.bounds
+let screenWidth = screenSize.width
+let screenHeight = screenSize.height
+
 
 class TrainerDetailViewController: UITableViewController {
 
     // class variables
+    var trainerImageSize = CGSize(width: 81, height: 146)
     var trainerModel: TrainerModel?
         
     // outlets
@@ -40,13 +47,22 @@ class TrainerDetailViewController: UITableViewController {
 
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         if let trainer = trainerModel {
             nameLabel.text = trainer.name.uppercased()
             titleLabel.text = trainer.title
             detailsView.text = trainer.details
-            trainerImage.image = UIImage(named: trainer.imageName)
+            if !trainer.imageName.containsIgnoringCase(find: "https://") &&
+                !trainer.imageName.containsIgnoringCase(find: "http://") {
+                trainerImage.image = UIImage(named: trainer.imageName)?.af_imageScaled(to: trainerImageSize)
+            } else {
+                let url = URL(string: trainer.imageName)
+                print("retrieving \(trainer.imageName)")  // zap
+                if let data = try? Data(contentsOf: url!) {
+                    trainerImage.image = UIImage(data: data)?.af_imageScaled(to: trainerImageSize)
+                }
+            }
         }
         
         // title should size to fit regardless of number of lines

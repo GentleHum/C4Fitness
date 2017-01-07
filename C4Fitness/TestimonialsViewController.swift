@@ -28,33 +28,12 @@ class TestimonialsViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 140
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         self.testimonials = ContentModel.testimonials
         self.testimonials.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
     
-/* zap
-    func refreshTestimonials() {
-        ContentServer.downloadTestimonials() { (newTestimonials, serviceError) in
-            
-            guard serviceError == nil else {
-                print(serviceError!.description)
-                return
-            }
-            
-            // copy the new scheduled classes to the view controller's storage and sort by sequence number
-            self.testimonials = newTestimonials as! [TestimonialModel]
-            self.testimonials.sort() { $0.sequenceNumber < $1.sequenceNumber }
-            
-            // reload screen data
-            self.tableView.reloadData()
-            
-        }
-        
-    }
- */
-
 }
 
 extension TestimonialsViewController {

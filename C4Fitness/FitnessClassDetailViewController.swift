@@ -18,6 +18,7 @@ class FitnessClassDetailViewController: UITableViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var footnoteLabel: UILabel!
     
     // return to previous controlled when done button pressed
     @IBAction func donePressed(_ sender: Any) {
@@ -34,17 +35,17 @@ class FitnessClassDetailViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         if let fitnessClass = fitnessClassModel {
             nameLabel.text = fitnessClass.name
             durationLabel.text = fitnessClass.duration
-            var descriptionString = fitnessClass.descriptionString
+            descriptionLabel.text = fitnessClass.descriptionString + "\n\n"
+            
+            footnoteLabel.text = ""
             if fitnessClass.footnote != "" {
-                descriptionString += "\n\n\n* " + fitnessClass.footnote
+                footnoteLabel.text = "* " + fitnessClass.footnote + "\n\n"
             }
-            descriptionLabel.text = descriptionString
-            descriptionLabel.sizeToFit()
         }
         
         

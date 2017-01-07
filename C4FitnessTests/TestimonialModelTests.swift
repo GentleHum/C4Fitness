@@ -47,9 +47,8 @@ class TestimonialModelTests: XCTestCase {
                             "location": "Bar",
                             "text": "Dee",
                             "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": testimonials as AnyObject]
-        let testimonial = TestimonialModel()
-        testimonial.set(jsonData: jsonData)
+        let jsonData: JSONDictionary =  ["fields": testimonials as AnyObject]
+        let testimonial = TestimonialModel(jsonData: jsonData)
         XCTAssertEqual(testimonial.name, "Foo")
         XCTAssertEqual(testimonial.location, "Bar")
         XCTAssertEqual(testimonial.text, "Dee")

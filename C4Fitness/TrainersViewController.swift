@@ -30,33 +30,11 @@ class TrainersViewController: UITableViewController {
         
 
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         self.trainers = ContentModel.trainers
         self.trainers.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
-    
-/* zap
-    func refreshTrainers() {
-        ContentServer.downloadTrainers() { (newTrainers, serviceError) in
-            
-            guard serviceError == nil else {
-                print(serviceError!.description)
-                return
-            }
-            
-            // copy the new scheduled classes to the view controller's storage
-            self.trainers = newTrainers as! [TrainerModel]
-            self.trainers.sort() { $0.sequenceNumber < $1.sequenceNumber }
-            
-            
-            // reload screen data
-            self.tableView.reloadData()
-            
-        }
-        
-    }
-*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! TrainerDetailViewController

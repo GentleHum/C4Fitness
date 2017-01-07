@@ -53,9 +53,8 @@ class TrainerModelTests: XCTestCase {
                         "imageName": "Dee",
                         "details": "XXX",
                         "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": trainers as AnyObject]
-        let trainer = TrainerModel()
-        trainer.set(jsonData: jsonData)
+        let jsonData: JSONDictionary =  ["fields": trainers as AnyObject]
+        let trainer = TrainerModel(jsonData: jsonData)
         XCTAssertEqual(trainer.name, "Foo")
         XCTAssertEqual(trainer.title, "Bar")
         XCTAssertEqual(trainer.imageName, "Dee")

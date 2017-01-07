@@ -19,11 +19,16 @@ class StaticContentModel: NSObject {
 }
 
 extension StaticContentModel: DownloadableDataModel {
-    func set(jsonData: Dictionary<String, AnyObject>) {
+    convenience init(jsonData: JSONDictionary) {
+        self.init()
         if let itemFields: AnyObject = jsonData["fields"] {
             self.label = (itemFields["label"] as? String) ?? ""
             self.text = (itemFields["text"] as? String) ?? ""
         }
+    }
+    
+    static func createInstance(jsonData: JSONDictionary) -> DownloadableDataModel {
+        return StaticContentModel(jsonData: jsonData)
     }
     
 }

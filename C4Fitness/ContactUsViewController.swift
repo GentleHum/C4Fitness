@@ -35,7 +35,7 @@ class ContactUsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         // populate the labels
         ourAddressHeaderLabel.text = ContentModel.ourAddresseHeader

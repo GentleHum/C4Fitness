@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ContentModel: NSObject {
     private static var staticContentItems: [StaticContentModel] = []
     private static var staticContentDictionary = [String: String] ()
@@ -16,6 +17,13 @@ class ContentModel: NSObject {
     static var fitnessClasses: [FitnessClassModel] = []
     static var trainers: [TrainerModel] = []
     static var scheduledClasses: [ScheduledClassModel] = []
+    
+    static var scheduledClassesLoaded = false
+    static var staticContentLoaded = false
+    static var testimonialsLoaded = false
+    static var fitnessClassesLoaded = false
+    static var trainersLoaded = false
+    
    
     class var noContractsHeader: String {
         return ContentModel.staticContentDictionary["noContractsHeader"] ?? ""
@@ -41,10 +49,11 @@ class ContentModel: NSObject {
         return ContentModel.staticContentDictionary["ourAddressText"] ?? ""
     }
 
-    class func loadStaticContentItems() {
+    class func loadStaticContentItems(completion: @escaping (ContentServiceError?) -> Void) {
         ContentServer.downloadStaticContent() { (newStaticContentItems, serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                completion(serviceError)
                 return
             }
             
@@ -55,68 +64,105 @@ class ContentModel: NSObject {
             for staticContentItem in staticContentItems {
                 staticContentDictionary[staticContentItem.label] = staticContentItem.text
             }
+            
+            completion(nil)
         }
     }
  
-    class func loadTestimonials() {
+    class func loadTestimonials(completion: @escaping (ContentServiceError?) -> Void) {
         ContentServer.downloadTestimonials() { (newTestimonials, serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                completion(serviceError)
                 return
             }
             
             // copy the new testimonials to the content model storage
             testimonials = newTestimonials as! [TestimonialModel]
+            completion(nil)
         }
         
     }
 
-    class func loadFitnessClasses() {
+    class func loadFitnessClasses(completion: @escaping (ContentServiceError?) -> Void) {
         ContentServer.downloadFitnessClasses() { (newFitnessClasses, serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                completion(serviceError)
                 return
             }
             
             // copy the new fitness claases to the content model storage
             fitnessClasses = newFitnessClasses as! [FitnessClassModel]
+            completion(nil)
+
         }
     }
 
-    class func loadTrainers() {
+    class func loadTrainers(completion: @escaping (ContentServiceError?) -> Void) {
         ContentServer.downloadTrainers() { (newTrainers, serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                completion(serviceError)
                 return
             }
             
             // copy the new trainers to the content model storage
             trainers = newTrainers as! [TrainerModel]
+            completion(nil)
         }
     }
 
-    class func loadScheduledClasses() {
+    class func loadScheduledClasses(completion: @escaping (ContentServiceError?) -> Void) {
         ContentServer.downloadScheduledClasses() { (newScheduledClasses, serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                completion(serviceError)
                 return
             }
             
             // copy the new trainers to the content model storage
             scheduledClasses = newScheduledClasses as! [ScheduledClassModel]
+            completion(nil)
         }
     }
+    
+    class func allContentLoaded() -> Bool {
+        return scheduledClassesLoaded && staticContentLoaded && testimonialsLoaded && fitnessClassesLoaded && trainersLoaded
+    }
 
-    class func loadAllContent(completion: @escaping () -> Void) {
-        
-        print("in downloadAllContent") // zap
-        loadStaticContentItems()
-        loadTestimonials()
-        loadFitnessClasses()
-        loadTrainers()
-// zap        loadScheduledClasses()
-        print("done reading content")  // zap
-
+    class func loadAllContent(completion: @escaping (ContentServiceError?) -> Void) {
+        loadScheduledClasses() { (serviceError) in
+            scheduledClassesLoaded = true
+            if ContentModel.allContentLoaded() {
+                completion(nil)
+            }
+        }
+        loadStaticContentItems() { (serviceError) in
+            staticContentLoaded = true
+            if ContentModel.allContentLoaded() {
+                completion(nil)
+            }
+        }
+        loadTestimonials() { (serviceError) in
+            testimonialsLoaded = true
+            if ContentModel.allContentLoaded() {
+                completion(nil)
+            }
+        }
+        loadFitnessClasses() { (serviceError) in
+            fitnessClassesLoaded = true
+            if ContentModel.allContentLoaded() {
+                completion(nil)
+            }
+        }
+        loadTrainers() { (serviceError) in
+            trainersLoaded = true
+            if ContentModel.allContentLoaded() {
+                completion(nil)
+            }
+        }
+    
     }
     
 }

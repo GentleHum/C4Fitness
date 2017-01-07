@@ -57,7 +57,8 @@ class ScheduledClassModel: NSObject {
 }
 
 extension ScheduledClassModel: DownloadableDataModel {
-    func set(jsonData: Dictionary<String, AnyObject>) {
+    convenience init(jsonData: JSONDictionary) {
+        self.init()
         if let itemFields: AnyObject = jsonData["fields"] {
             self.name = (itemFields["name"] as? String) ?? ""
             self.date = (itemFields["date"] as? String) ?? ""
@@ -68,5 +69,8 @@ extension ScheduledClassModel: DownloadableDataModel {
         }
     }
     
+    static func createInstance(jsonData: JSONDictionary) -> DownloadableDataModel {
+        return ScheduledClassModel(jsonData: jsonData)
+    }
 
 }

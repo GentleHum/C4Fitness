@@ -25,7 +25,8 @@ class TrainerModel: NSObject {
 }
 
 extension TrainerModel: DownloadableDataModel {
-    func set(jsonData: Dictionary<String, AnyObject>) {
+    convenience init(jsonData: JSONDictionary) {
+        self.init()
         if let itemFields: AnyObject = jsonData["fields"] {
             self.name = (itemFields["name"] as? String) ?? ""
             self.title = (itemFields["title"] as? String) ?? ""
@@ -35,4 +36,8 @@ extension TrainerModel: DownloadableDataModel {
         }
     }
     
+    static func createInstance(jsonData: JSONDictionary) -> DownloadableDataModel {
+        return TrainerModel(jsonData: jsonData)
+    }
+
 }

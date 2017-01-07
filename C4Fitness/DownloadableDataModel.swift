@@ -9,5 +9,5 @@
 import UIKit
 
 protocol DownloadableDataModel {
-    func set(jsonData: Dictionary<String, AnyObject>)
+    static func createInstance(jsonData: JSONDictionary) -> DownloadableDataModel
 }

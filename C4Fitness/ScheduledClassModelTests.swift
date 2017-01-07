@@ -59,9 +59,8 @@ class ScheduledClassModelTests: XCTestCase {
                                 "endTime": "Lee",
                                 "trainerName": "XXX",
                                 "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": scheduledClasses as AnyObject]
-        let scheduledClass = ScheduledClassModel()
-        scheduledClass.set(jsonData: jsonData)
+        let jsonData: JSONDictionary =  ["fields": scheduledClasses as AnyObject]
+        let scheduledClass = ScheduledClassModel(jsonData: jsonData)
         XCTAssertEqual(scheduledClass.name, "Foo")
         XCTAssertEqual(scheduledClass.date, "Bar")
         XCTAssertEqual(scheduledClass.startTime, "Dee")

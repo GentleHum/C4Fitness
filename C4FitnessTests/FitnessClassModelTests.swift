@@ -52,9 +52,8 @@ class FitnessClassModelTests: XCTestCase {
                               "footnote": "Dee",
                               "duration": "45 min",
                               "sequenceNumber": 1] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": fitnessClasses as AnyObject]
-        let fitnessClass = FitnessClassModel()
-        fitnessClass.set(jsonData: jsonData)
+        let jsonData: JSONDictionary =  ["fields": fitnessClasses as AnyObject]
+        let fitnessClass = FitnessClassModel(jsonData: jsonData)
         XCTAssertEqual(fitnessClass.name, "Foo")
         XCTAssertEqual(fitnessClass.descriptionString, "Bar")
         XCTAssertEqual(fitnessClass.footnote, "Dee")

@@ -9,10 +9,11 @@
 import UIKit
 
 extension UIViewController {
-    func setRevealViewControllerOptions(menuButton: UIBarButtonItem?) {
+    func setRevealViewControllerOptions(_ menuButton: UIBarButtonItem?) {
         if let revealViewController = self.revealViewController()  {
             self.view.addGestureRecognizer(revealViewController.panGestureRecognizer())
             revealViewController.presentFrontViewHierarchically = false
+            revealViewController.toggleAnimationType = SWRevealToggleAnimationType.easeOut
             revealViewController.toggleAnimationDuration = 0.3
             revealViewController.bounceBackOnOverdraw = false
             revealViewController.bounceBackOnLeftOverdraw = false

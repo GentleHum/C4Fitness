@@ -20,10 +20,14 @@ class TestimonialModel: NSObject {
         self.text = text
         self.sequenceNumber = sequenceNumber
     }
+    
+    
 }
 
-extension TestimonialModel: DownloadableDataModel {
-    func set(jsonData: Dictionary<String, AnyObject>) {
+// add the DownloadableDataModel protocol
+extension TestimonialModel: DownloadableDataModel {    
+    convenience init(jsonData: JSONDictionary) {
+        self.init()
         if let itemFields: AnyObject = jsonData["fields"] {
             self.name = (itemFields["name"] as? String) ?? ""
             self.location = (itemFields["location"] as? String) ?? ""
@@ -31,5 +35,10 @@ extension TestimonialModel: DownloadableDataModel {
             self.sequenceNumber = (itemFields["sequenceNumber"] as? Int) ?? 0
         }
     }
+    
+    static func createInstance(jsonData: JSONDictionary) -> DownloadableDataModel {
+        return TestimonialModel(jsonData: jsonData)
+    }
+    
     
 }

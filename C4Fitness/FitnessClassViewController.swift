@@ -25,35 +25,11 @@ class FitnessClassViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
         
         self.fitnessClasses = ContentModel.fitnessClasses
         self.fitnessClasses.sort() { $0.sequenceNumber < $1.sequenceNumber }
     }
-    
-    
-    
-/* zap
-    func refreshFitnessClasses() {
-        ContentServer.downloadFitnessClasses() { (newFitnessClasses, serviceError) in
-            
-            guard serviceError == nil else {
-                print(serviceError!.description)
-                return
-            }
-            
-            // copy the new scheduled classes to the view controller's storage
-            self.fitnessClasses = newFitnessClasses as! [FitnessClassModel]
-            self.fitnessClasses.sort() { $0.sequenceNumber < $1.sequenceNumber }
-            
-            
-            // reload screen data
-            self.tableView.reloadData()
-            
-        }
-        
-    }
-*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! FitnessClassDetailViewController

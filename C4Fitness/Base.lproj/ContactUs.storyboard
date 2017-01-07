@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-Mv-dEs">
-                                <rect key="frame" x="16" y="135" width="343" height="516"/>
+                                <rect key="frame" x="16" y="143" width="343" height="508"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="GaU-E6-L09" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="Pr4-qg-jlt"/>
                             <constraint firstItem="XUe-Mv-dEs" firstAttribute="leading" secondItem="H0V-zW-q15" secondAttribute="leadingMargin" id="TsL-ak-3e1"/>
                             <constraint firstItem="GaU-E6-L09" firstAttribute="top" secondItem="gzU-XY-4Pz" secondAttribute="bottom" constant="8" id="TvP-8N-Tmy"/>
-                            <constraint firstItem="XUe-Mv-dEs" firstAttribute="top" secondItem="GaU-E6-L09" secondAttribute="bottom" constant="8" id="VO0-yA-MV7"/>
+                            <constraint firstItem="XUe-Mv-dEs" firstAttribute="top" secondItem="GaU-E6-L09" secondAttribute="bottom" constant="16" id="VO0-yA-MV7"/>
                             <constraint firstItem="JQs-kL-kkF" firstAttribute="top" secondItem="XUe-Mv-dEs" secondAttribute="bottom" constant="16" id="bPr-J0-KCE"/>
                             <constraint firstItem="gzU-XY-4Pz" firstAttribute="trailing" secondItem="H0V-zW-q15" secondAttribute="trailingMargin" id="eCT-Nt-8DT"/>
                         </constraints>

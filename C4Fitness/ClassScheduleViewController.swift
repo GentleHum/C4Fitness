@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ClassScheduleViewController: UITableViewController {
     // class variables
@@ -14,12 +16,14 @@ class ClassScheduleViewController: UITableViewController {
     var datesToShow: [String] = []
     var classDictionary = Dictionary<String, [ScheduledClassModel]>()
     
+    
     // outlets
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         // Do any additional setup after loading the view.
         
         setDatesToShow(startDate: "11/20/2016", numberOfDatesToShow: 7) // show a week at a time
@@ -28,12 +32,29 @@ class ClassScheduleViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
         
         // setup the menu controller
-        self.setRevealViewControllerOptions(menuButton: self.menuButton)
+        self.setRevealViewControllerOptions(self.menuButton)
+        
+        // setup the "pull to refresh" option
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(ClassScheduleViewController.handleTableRefresh(_:)), for: UIControlEvents.valueChanged)
+
         
         // read from the content system
-        refreshScheduledClasses()
-   
-/* zap
+        if ContentModel.scheduledClassesLoaded {
+            loadFromContentModel()
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000), execute: {
+                if ContentModel.scheduledClassesLoaded {
+                    self.loadFromContentModel()
+                } else {
+                    self.showErrorMessage("Encountered an error while loading scheduled classes. Trying swiping down to refresh.")
+                }
+            })
+        }
+        
+    }
+    
+    func loadFromContentModel() {
         self.scheduledClasses = ContentModel.scheduledClasses
         self.scheduledClasses.sort() { $0.getDateTime() < $1.getDateTime() }
         
@@ -41,14 +62,8 @@ class ClassScheduleViewController: UITableViewController {
         self.updateClassDictionary()
         
         self.tableView.reloadData()
-*/
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func getClassesForDate(date: String) -> [ScheduledClassModel]  {
         var classesForDate: [ScheduledClassModel] = []
@@ -74,8 +89,6 @@ class ClassScheduleViewController: UITableViewController {
             datesToShow.append(currDateString)
             currDate.addTimeInterval(numberOfSecondsInDay)
         }
-        
-        
     }
     
     func updateClassDictionary() {
@@ -86,30 +99,43 @@ class ClassScheduleViewController: UITableViewController {
     }
     
     func refreshScheduledClasses() {
-        ContentServer.downloadScheduledClasses() { (newScheduledClasses, serviceError) in
-            
+        ContentModel.loadScheduledClasses() { (serviceError) in
             guard serviceError == nil else {
                 print(serviceError!.description)
+                self.showErrorMessage(serviceError!.description)
                 return
             }
             
-            // copy the new scheduled classes to the view controller's storage and order by date/time
-            self.scheduledClasses = newScheduledClasses as! [ScheduledClassModel]
-            self.scheduledClasses.sort() { $0.getDateTime() < $1.getDateTime() }
-            
-            // update the classes for efficient display
-            self.updateClassDictionary()
-
-            // reload screen data
-            self.tableView.reloadData()
-            
+            // grab the data from the content model
+            self.loadFromContentModel()
         }
-        
     }
     
 }
 
-// table view delegate and data source functions
+// MARK: support pull to refresh
+extension ClassScheduleViewController {
+    func handleTableRefresh(_ refreshControl: UIRefreshControl) {
+        refreshScheduledClasses()
+        refreshControl.endRefreshing()
+        
+    }
+    
+    func showErrorMessage(_ errorMessage: String) {
+        let alertController = UIAlertController(title: "Service Error", message: errorMessage, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true) {
+        }
+    }
+    
+}
+
+
+// MARK: table view delegate and data source functions
 extension ClassScheduleViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

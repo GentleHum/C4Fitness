@@ -34,9 +34,8 @@ class StaticContentModelTests: XCTestCase {
     func test_CreateWithJsonData_SetsValues() {
         let staticContentItems = ["label": "Foo",
                                   "text": "Bar"] as [String : Any]
-        let jsonData: Dictionary<String, AnyObject> =  ["fields": staticContentItems as AnyObject]
-        let staticContent = StaticContentModel()
-        staticContent.set(jsonData: jsonData)
+        let jsonData: JSONDictionary =  ["fields": staticContentItems as AnyObject]
+        let staticContent = StaticContentModel(jsonData: jsonData)
         XCTAssertEqual(staticContent.label, "Foo")
         XCTAssertEqual(staticContent.text, "Bar")
     }

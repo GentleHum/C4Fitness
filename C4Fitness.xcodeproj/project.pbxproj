@@ -28,6 +28,8 @@
 		7E97E3551DDD102900AAD507 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3541DDD102900AAD507 /* ContactUsViewController.swift */; };
 		7E97E3591DDD106600AAD507 /* TestimonialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E3581DDD106600AAD507 /* TestimonialsViewController.swift */; };
 		7E9B8AA71DE548E900AB10EC /* DownloadableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */; };
+		7EA8127D1E01F4140080E7D2 /* String+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8127C1E01F4140080E7D2 /* String+ExtensionsTests.swift */; };
+		7EDA2AE61E01E80400AAC7D1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA2AE51E01E80400AAC7D1 /* String+Extensions.swift */; };
 		EB16003F1DDE7E520031B648 /* TrainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16003E1DDE7E520031B648 /* TrainerModel.swift */; };
 		EB1600411DDE7FFA0031B648 /* TrainerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600401DDE7FFA0031B648 /* TrainerModelTests.swift */; };
 		EB1600431DDE823B0031B648 /* ScheduledClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1600421DDE823B0031B648 /* ScheduledClassModel.swift */; };
@@ -86,6 +88,8 @@
 		7E97E3541DDD102900AAD507 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		7E97E3581DDD106600AAD507 /* TestimonialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestimonialsViewController.swift; sourceTree = "<group>"; };
 		7E9B8AA61DE548E900AB10EC /* DownloadableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadableDataModel.swift; sourceTree = "<group>"; };
+		7EA8127C1E01F4140080E7D2 /* String+ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		7EDA2AE51E01E80400AAC7D1 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8A9D079A634BF41154947D6A /* Pods-C4Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-C4Fitness/Pods-C4Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 		D857B5CBBFAFDC65FF2332D7 /* Pods-C4FitnessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C4FitnessTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-C4FitnessTests/Pods-C4FitnessTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB16003E1DDE7E520031B648 /* TrainerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerModel.swift; sourceTree = "<group>"; };
@@ -162,11 +166,12 @@
 			children = (
 				7E327C561DDC090A0069DFBA /* AppDelegate.swift */,
 				7E327C761DDC09360069DFBA /* Controller */,
+				EBAFAADD1DE261F6007712E6 /* Images */,
+				7EA8127A1E01ED220080E7D2 /* Library */,
 				EB16003D1DDE7D7A0031B648 /* Model */,
 				7E327C771DDC09470069DFBA /* SWRevealViewController */,
 				7E327C5D1DDC090A0069DFBA /* Assets.xcassets */,
 				7E327C8A1DDC0CE90069DFBA /* Images.xcassets */,
-				EBAFAADD1DE261F6007712E6 /* Images */,
 				7E327C891DDC0C2A0069DFBA /* Storyboard */,
 				7E327C621DDC090A0069DFBA /* Info.plist */,
 			);
@@ -176,6 +181,7 @@
 		7E327C6A1DDC090A0069DFBA /* C4FitnessTests */ = {
 			isa = PBXGroup;
 			children = (
+				7EA8127B1E01F3D10080E7D2 /* Library */,
 				EBE3FCA11DEBB3CB005F5F8E /* Model */,
 				7E327C6D1DDC090A0069DFBA /* Info.plist */,
 			);
@@ -222,6 +228,22 @@
 				7E327C5F1DDC090A0069DFBA /* LaunchScreen.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		7EA8127A1E01ED220080E7D2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7EDA2AE51E01E80400AAC7D1 /* String+Extensions.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		7EA8127B1E01F3D10080E7D2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7EA8127C1E01F4140080E7D2 /* String+ExtensionsTests.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		EB16003D1DDE7D7A0031B648 /* Model */ = {
@@ -318,7 +340,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Mike Vork";
 				TargetAttributes = {
 					7E327C521DDC090A0069DFBA = {
@@ -478,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8D5A971DE687B300D6F470 /* FitnessClassDetailViewController.swift in Sources */,
+				7EDA2AE61E01E80400AAC7D1 /* String+Extensions.swift in Sources */,
 				EB8D5A951DE67F2300D6F470 /* FitnessClassViewController.swift in Sources */,
 				EB1600431DDE823B0031B648 /* ScheduledClassModel.swift in Sources */,
 				7E327C851DDC0B490069DFBA /* MenuController.swift in Sources */,
@@ -506,6 +529,7 @@
 			files = (
 				EB1600451DDE83160031B648 /* ScheduledClassModelTests.swift in Sources */,
 				EB8D5A991DE691CC00D6F470 /* FitnessClassModelTests.swift in Sources */,
+				7EA8127D1E01F4140080E7D2 /* String+ExtensionsTests.swift in Sources */,
 				EB1600411DDE7FFA0031B648 /* TrainerModelTests.swift in Sources */,
 				EB1600491DDE861B0031B648 /* TestimonialModelTests.swift in Sources */,
 				7E2368DF1DEE680900C95E8F /* StaticContentModelTests.swift in Sources */,
@@ -588,7 +612,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mwvork@gmail.com (DNSUK3L6P4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mwvork@gmail.com (DNSUK3L6P4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -638,7 +663,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mwvork@gmail.com (DNSUK3L6P4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mwvork@gmail.com (DNSUK3L6P4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
